@@ -270,9 +270,9 @@ $(".button").click(function(){
     console.log(energyunit)
     console.log(sugar)
     energytotal=energyunit*weight;
-    var fenmu=(1+sugar)*sugar;
+    var fenmu=sugar/(1+sugar);
     var fenmu1=(1+sugar)
-    energysugar=energytotal/fenmu;
+    energysugar=energytotal*fenmu;
     energyfat=energytotal/fenmu1;
     sugartotal=energysugar/4;
     console.log(sugartotal)
