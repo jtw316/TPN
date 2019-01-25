@@ -32,18 +32,18 @@ body,html{
 .row{
     height: 50px;
     line-height: 50px;
-    background-color: #fff;  
+    background-color: #fff;
 }
 .row_result{
     height: 30px;
     line-height: 30px;
-    background-color: #fff; 
+    background-color: #fff;
     color: #999;
 }
 .main{
     background-color: #ebeeef;
     width: 100%;
-    height: 100%; 
+    height: 100%;
     padding-top: 10px
 }
 .title_left{
@@ -98,7 +98,7 @@ button{
     padding: 13px 0;
     margin: 45px 10px;
     margin-bottom: auto;
-    border-radius: 7px;    
+    border-radius: 7px;
 }
 .result{
     display: none;
@@ -147,11 +147,11 @@ button{
             <div class="row_result">
                 <div class="left"><span class="title_left_result">50%葡萄糖(ml):</span></div>
                 <div class="right"><span class="right sugarvolume1"></span></div>
-            </div>  
+            </div>
             <div class="row_result">
                 <div class="left"><span class="title_left_result">10%葡萄糖(ml):</span></div>
                 <div class="right"><span class="right sugarvolume2"></span></div>
-            </div>             
+            </div>
         </div>
         <!-- 脂肪 -->
         <div>
@@ -161,7 +161,7 @@ button{
             <div class="row_result">
                 <div class="left"><span class="title_left_result">20%脂肪乳剂(ml):</span></div>
                 <div class="right"><span class="right fatvolume"></span></div>
-            </div>            
+            </div>
         </div>
         <!-- 氨基酸 -->
         <div>
@@ -171,28 +171,28 @@ button{
             <div class="row_result">
                 <div class="left"><span class="title_left_result">目前蛋白(g/kg.d):</span></div>
                 <div class="right"><span class="right proteinunit"></span></div>
-            </div>  
+            </div>
             <div class="row_result">
                 <div class="left"><span class="title_left_result">参考类:</span></div>
                 <div class="right"><span class="right rightfull">非应急状态 0.8-1.0</span></div>
-            </div> 
+            </div>
             <div class="row_result">
                 <div class="right"><span class="right rightfull">轻度应激 1.0-1.2</span></div>
-            </div> 
+            </div>
             <div class="row_result">
                 <div class="right"><span class="right rightfull">中度应激 1.3-1.75</span></div>
-            </div> 
+            </div>
             <div class="row_result">
                 <div class="right"><span class="right rightfull">重度应激 2.0-2.5</span></div>
-            </div> 
+            </div>
             <div class="row_result">
                 <div class="left"><span class="title_left_result">20%丙氨酰谷胺酰胺(力肽)(ml):</span></div>
                 <div class="right"><span class="right proteinvolume1"></span></div>
-            </div>  
+            </div>
             <div class="row_result">
-                <div class="left"><span class="title_left_result">5%金氨基酸(ml):</span></div>
+                <div class="left"><span class="title_left_result">5%氨基酸(ml):</span></div>
                 <div class="right"><span class="right proteinvolume2"></span></div>
-            </div>                    
+            </div>
         </div>
         <!-- 其他 -->
         <div>
@@ -202,11 +202,11 @@ button{
             <div class="row_result">
                 <div class="left"><span class="title_left_result">10%氯化钠:</span></div>
                 <div class="right"><span class="right">20ml</span></div>
-            </div>  
+            </div>
             <div class="row_result">
                 <div class="left"><span class="title_left_result">10%氯化钾:</span></div>
                 <div class="right"><span class="right">20ml</span></div>
-            </div> 
+            </div>
             <div class="row_result">
                 <div class="left"><span class="title_left_result">10%葡酸钙:</span></div>
                 <div class="right"><span class="right">10ml</span></div>
@@ -214,19 +214,19 @@ button{
             <div class="row_result">
                 <div class="left"><span class="title_left_result">25%硫酸镁:</span></div>
                 <div class="right"><span class="right">1.5ml</span></div>
-            </div>  
+            </div>
             <div class="row_result">
                 <div class="left"><span class="title_left_result">胰岛素:</span></div>
                 <div class="right"><span class="right insulinvolume"></span></div>
-            </div> 
+            </div>
             <div class="row_result">
                 <div class="left"><span class="title_left_result">组合维生素:</span></div>
-                <div class="right"><span class="right">一瓶</span></div>
-            </div> 
+                <div class="right"><span class="right">一支</span></div>
+            </div>
             <div class="row_result">
                 <div class="left"><span class="title_left_result">微量元素(安达美):</span></div>
                 <div class="right"><span class="right">两支</span></div>
-            </div>             
+            </div>
         </div>
     </div>
 </div>
@@ -234,7 +234,7 @@ button{
 
 </body>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-<script>    
+<script>
 $(".weight").on("input propertychange",function(){
     if($(".height").val()!=0){
         var weight=Number($(this).val())
@@ -243,10 +243,10 @@ $(".weight").on("input propertychange",function(){
         console.log(height)
         BMI=Number(weight/(height*height))*10000
         BMI=BMI.toFixed(2);
-        $(".BMI").val(BMI)       
+        $(".BMI").val(BMI)
     }
 
-})    
+})
 $(".height").on("input propertychange",function(){
     if($(".weight").val()!=0){
         var weight=Number($(".weight").val())
@@ -255,36 +255,36 @@ $(".height").on("input propertychange",function(){
         console.log(height)
         BMI=Number(weight/(height*height))*10000
         BMI=BMI.toFixed(2);
-        $(".BMI").val(BMI) 
-    }       
+        $(".BMI").val(BMI)
+    }
 })
 //计算结果按钮
 $(".button").click(function(){
     $(".result").css("display","block")
     //var sugarvolume1=(sugartotal-liquidunit+proteinvolume1+proteinvolume2+fatvolume)/4
-    //以下为第一项sugartotal的求得方法 
+    //以下为第一项sugartotal的求得方法
     var weight=Number($(".weight").val());
     var energyunit=Number($(".energyunit").val());
-    var sugar=Number($(".sugar").val()); 
+    var sugar=Number($(".sugar").val());
     console.log(weight)
     console.log(energyunit)
     console.log(sugar)
     energytotal=energyunit*weight;
     var fenmu=(1+sugar)*sugar;
-    var fenmu1=(1+sugar) 
-    energysugar=energytotal/fenmu; 
-    energyfat=energytotal/fenmu1;   
+    var fenmu1=(1+sugar)
+    energysugar=energytotal/fenmu;
+    energyfat=energytotal/fenmu1;
     sugartotal=energysugar/4;
-    console.log(sugartotal) 
+    console.log(sugartotal)
     //以下为第二项liquidunit的求得方法
     var liquidunit=Number($(".liquidunit").val())
     //以下为第三项proteinvolume1第四项proteinvolume2的求得方法
     var nitro=Number($(".nitro").val());
     protein=energytotal*6.25/nitro;
-    proteinunit=protein/weight  
+    proteinunit=protein/weight
     if(protein<=2){
         proteinvolume1=0.3*weight*5;
-        proteinvolume2=(proteinunit-0.3)*weight*20;    
+        proteinvolume2=(proteinunit-0.3)*weight*20;
     }else{
         proteinvolume1=0.4*weight*5;
         proteinvolume2=(proteinunit-0.4)*weight*20;
@@ -313,7 +313,7 @@ $(".button").click(function(){
     $(".proteinvolume2").html(proteinvolume2.toFixed(2))
 
     $(".insulinvolume").html(insulinvolume.toFixed(2))
-    
+
 
 
 })
